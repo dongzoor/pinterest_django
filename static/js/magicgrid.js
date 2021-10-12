@@ -274,15 +274,6 @@ MagicGrid.prototype.listen = function listen () {
   else { this.getReady(); }
 };
 
-var masonrys = document.getElementsByTagName("img");
-
-for (let i = 0; i < masonrys.length; i++) {
-    masonrys[i].addEventListener('load', function () {
-        magicGrid.positionItems();
-    }, false);
-}
-/*모든  html 태그 내의 이미지에 대해서 이미지가 로드가 됐을때 매직그리드를 다시 포지셔닝하라는 이벤트리스너를 추가해줌 */
-
 let magicGrid = new MagicGrid({
   container: '.container',
   animate: true,
@@ -292,3 +283,12 @@ let magicGrid = new MagicGrid({
 });
 
 magicGrid.listen();
+
+var masonrys = document.getElementsByTagName("img");
+
+for (let i = 0; i < masonrys.length; i++) {
+    masonrys[i].addEventListener('load', function () {
+        magicGrid.positionItems();
+    }, false);
+}
+/*모든  html 태그 내의 이미지에 대해서 이미지가 로드가 됐을때 매직그리드를 다시 포지셔닝하라는 이벤트리스너를 추가해줌 */
