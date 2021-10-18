@@ -277,12 +277,10 @@ MagicGrid.prototype.listen = function listen () {
 let magicGrid = new MagicGrid({
   container: '.container',
   animate: true,
-  gutter: 30,
+  gutter: 12,
   static: true,
   useMin: true
 });
-
-magicGrid.listen();
 
 var masonrys = document.getElementsByTagName("img");
 
@@ -292,3 +290,5 @@ for (let i = 0; i < masonrys.length; i++) {
     }, false);
 }
 /*모든  html 태그 내의 이미지에 대해서 이미지가 로드가 됐을때 매직그리드를 다시 포지셔닝하라는 이벤트리스너를 추가해줌 */
+
+magicGrid.listen();
